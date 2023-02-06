@@ -212,7 +212,7 @@ picture::before {
 
 @media (min-width: 55.625em) {
   .card {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
   }
 
   .card__text-content {
@@ -235,7 +235,6 @@ picture::before {
 
   .card {
     gap: 3rem;
-    grid-template-columns: 1fr 1fr;
   }
 
   .card__description {
