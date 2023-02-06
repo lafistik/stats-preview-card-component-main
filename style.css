@@ -143,16 +143,13 @@ picture::before {
 
 @media (min-width: 43.75em) {
   body {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 
   .card {
     /* gap: 3rem; */
-    /* grid-auto-flow: column;
-    grid-auto-columns: 1fr; */
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr auto;
     text-align: left;
-    gap: 1rem;
   }
 
   .card__text-content {
@@ -170,7 +167,7 @@ picture::before {
 
   .card__data {
     grid-auto-flow: column;
-    grid-auto-columns: 1fr;
+    grid-auto-columns: auto;
   }
 
   .card__data-piece-header {
@@ -188,21 +185,20 @@ picture::before {
   }
 
   .card {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .card__description {
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
   }
 
   .card__title {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     font-size: 1.75rem;
   }
 
   .card__text-content {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .card__data-piece-header {
@@ -214,6 +210,24 @@ picture::before {
   }
 }
 
+@media (min-width: 55.625em) {
+  .card {
+    grid-template-columns: 1fr auto;
+  }
+
+  .card__text-content {
+    padding: 2.5rem;
+  }
+
+  .card__title {
+    margin-bottom: 2rem;
+  }
+
+  .card__description {
+    margin-bottom: 2rem;
+  }
+}
+
 @media (min-width: 63.75em) {
   body {
     font-size: var(--fs-regular);
@@ -221,6 +235,7 @@ picture::before {
 
   .card {
     gap: 3rem;
+    grid-template-columns: 1fr 1fr;
   }
 
   .card__description {
