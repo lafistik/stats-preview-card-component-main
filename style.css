@@ -166,10 +166,6 @@ picture::before {
     order: 1;
   }
 
-  .card__description {
-    /* margin-bottom: 5rem; */
-  }
-
   .card__data {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
