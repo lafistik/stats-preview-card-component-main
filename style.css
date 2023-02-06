@@ -1,0 +1,238 @@
+:root {
+  --clr-primary-800: hsl(233, 47%, 7%);
+  --clr-primary-700: hsl(244, 38%, 16%);
+
+  --clr-accent-400: hsl(277, 64%, 61%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-150: hsla(0, 0%, 100%, 0.75);
+  --clr-neutral-200: hsla(0, 0%, 100%, 0.6);
+
+  --fs-regular: 0.9125rem;
+
+  --ff-regular: "Inter", sans-serif;
+  --ff-accent: "Lexend Deca", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--clr-primary-800);
+  font-family: var(--ff-regular);
+  font-size: var(--fs-regular);
+
+  display: grid;
+  place-content: center;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* GENERAL STYLES */
+
+.card {
+  margin: 3rem 1.5rem;
+  background-color: var(--clr-primary-700);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-align: center;
+
+  display: grid;
+  max-width: 1000px;
+}
+
+.card__text-content {
+  padding: 2.5rem 2rem;
+}
+
+.card__title {
+  color: var(--clr-neutral-100);
+  font-size: 1.75rem;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.card__title .highlight {
+  color: var(--clr-accent-400);
+}
+
+.card__description {
+  color: var(--clr-neutral-200);
+  margin-bottom: 2rem;
+}
+
+.card__data {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.card__data-piece-header {
+  color: var(--clr-neutral-100);
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  margin-bottom: 0.375rem;
+}
+
+.card__data-piece p:last-child {
+  color: var(--clr-neutral-200);
+  font-family: var(--ff-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+}
+
+picture {
+  position: relative;
+  order: -1;
+}
+
+picture::before {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--clr-accent-400);
+  opacity: 0.5;
+}
+
+@media (min-width: 43.75em) {
+  body {
+    font-size: 0.75rem;
+  }
+
+  .card {
+    /* gap: 3rem; */
+    /* grid-auto-flow: column;
+    grid-auto-columns: 1fr; */
+    grid-template-columns: 1fr 1.5fr;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .card__text-content {
+    padding: 1rem;
+  }
+
+  .card__title {
+    /* margin-bottom: 2rem; */
+    font-size: 1.5rem;
+  }
+
+  picture {
+    order: 1;
+  }
+
+  .card__description {
+    /* margin-bottom: 5rem; */
+  }
+
+  .card__data {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+
+  .card__data-piece-header {
+    font-size: 1.25rem;
+  }
+
+  .card__data-piece p:last-child {
+    font-size: 0.65rem;
+  }
+}
+
+@media (min-width: 51.25em) {
+  body {
+    font-size: 0.875rem;
+  }
+
+  .card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card__text-content {
+    padding: 2rem;
+  }
+
+  .card__title {
+    margin-bottom: 1.5rem;
+  }
+
+  .card__description {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 65em) {
+  body {
+    font-size: var(--fs-regular);
+  }
+
+  .card {
+    gap: 3rem;
+  }
+
+  .card__description {
+    margin-bottom: 4rem;
+  }
+
+  .card__title {
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+  }
+
+  .card__text-content {
+    padding: 3.25rem 4rem;
+  }
+
+  .card__data-piece-header {
+    font-size: 1.5rem;
+  }
+
+  .card__data-piece p:last-child {
+    font-size: 0.75rem;
+  }
+}

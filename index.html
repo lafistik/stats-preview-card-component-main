@@ -11,14 +11,57 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Stats preview card component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    Get insights that help your business grow. Discover the benefits of data
-    analytics and make better decisions regarding revenue, customer experience,
-    and overall efficiency. 10k+ companies 314 templates 12m+ queries
+    <main>
+      <article class="card">
+        <div class="card__text-content">
+          <h1 class="card__title">
+            Get <span class="highlight">insights</span> that help your business
+            grow.
+          </h1>
+          <p class="card__description">
+            Discover the benefits of data analytics and make better decisions
+            regarding revenue, customer experience, and overall efficiency.
+          </p>
+          <div class="card__data">
+            <div class="card__data-piece">
+              <p class="card__data-piece-header">10K+</p>
+              <p>companies</p>
+            </div>
+            <div class="card__data-piece">
+              <p class="card__data-piece-header">314</p>
+              <p>templates</p>
+            </div>
+            <div class="card__data-piece">
+              <p class="card__data-piece-header">12M+</p>
+              <p>queries</p>
+            </div>
+          </div>
+        </div>
+        <picture>
+          <source
+            srcset="images/image-header-desktop.jpg"
+            media="(min-width: 700px)"
+          />
+          <img
+            class="card__image"
+            src="images/image-header-mobile.jpg"
+            alt="workers sitting at the table during meeting and talking about something funny"
+          />
+        </picture>
+      </article>
+    </main>
   </body>
 </html>
